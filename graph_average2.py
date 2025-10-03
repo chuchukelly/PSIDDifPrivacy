@@ -36,15 +36,12 @@ def average_data(data_list):
 
 def compute_max_conf_interval(datalist):
     
-    # 计算样本均值
+    
     mean = np.mean(datalist) 
-    # 计算样本标准差
-    std_dev = np.std(datalist, ddof=1)  # 使用ddof=1来计算样本标准差
-    # 样本大小
+    std_dev = np.std(datalist, ddof=1)  
     n = len(datalist)
-    # 计算t值
     t_value = 1.96
-    # 计算置信区间
+    # CI
     margin_of_error = t_value * (std_dev / np.sqrt(n))
     max_upper_conf_interval = (mean - margin_of_error, mean + margin_of_error)
     max_upper=mean
@@ -107,7 +104,6 @@ def main():
 
     files = [
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_orig.txt',
-        
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps1_randomseed111_gen161725_beta0.3_theta4_thr20_seed21.txt',
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps1_randomseed111_gen161725_beta0.3_theta4_thr20_seed24.txt',
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps1_randomseed111_gen161725_beta0.3_theta4_thr20_seed27.txt',
@@ -147,11 +143,7 @@ def main():
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps100_randomseed111_gen161725_beta0.3_theta4_thr20_seed63.txt',
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps100_randomseed111_gen161725_beta0.3_theta4_thr20_seed78.txt',
         '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps100_randomseed111_gen161725_beta0.3_theta4_thr20_seed80.txt',
-        '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps100_randomseed111_gen161725_beta0.3_theta4_thr20_seed89.txt',
-        
-        
-
-        
+        '/Users/xunuo/Desktop/untitled folder 2/PSIDDifPrivacy/runDataSynth_log_deg0_eps100_randomseed111_gen161725_beta0.3_theta4_thr20_seed89.txt',        
 
     ]
 
